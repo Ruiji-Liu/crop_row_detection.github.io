@@ -274,10 +274,13 @@
         <div class="rows">
             <div class="rows is-centered ">
                 <div class="row is-full-width">
-                    <img src="assets/images/pull.png" class="interpolation-image"
+                    <img src="assets/images/system.pdf" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto"/>
                     <br>
-                    <span style="font-size: 110%"><b>Multimodal prompts for task specification.</b> We observe that many robot manipulation tasks can be expressed as <i>multimodal prompts</i> that interleave language and image/video frames. We propose VIMA, an embodied agent capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right).</span>
+                    <span style="font-size: 110%"><b>Navigation system’s workflow.</b> (i) The crop row detection algorithm uses LiDAR data and filtered odometry values [x, y, ψ] as inputs, predicting
+                        crop rows in the form [x1, y1, x2, y2] within the robot’s frame. (ii) The crop row following algorithm applies nonlinear MPC to control the robot to follow
+                        the center line of the predicted rows, sending linear velocity v and angular velocity w commands. (iii) The crop row switching algorithm utilizes a PID
+                        controller to navigate the robot to the next lane if no more crop rows are detected.</span>
                 </div>
             </div>
         </div>
