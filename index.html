@@ -246,7 +246,33 @@
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span class="dvima">3. Crop Row Switching</span></h2>
+                    <div class="row is-full-width">
+                        <img src="assets/images/strategy.png" class="interpolation-image"
+                                 alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 80%;"/>
+                            <br>
+                            <span style="font-size: 110%"><b>Whole field coverage strategy.</b> </span>
+                            </div>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            We implemented a PID controller method that uses mainly filtered odometry data.
+                            Since the crops are typically planted in parallel rows for efficient management, this approach first rotates the robot by 90 degrees, 
+                            drives it forward based on the distance between crop rows, and then performs another 90-degree turn to navigate into the next lane. 
+                            Then, the LiDAR-based navigation system is started again and navigates the robot through the new lane. 
+                            This process is implemented as a finite state machine, which enables the automatic change of states during execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</section>
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
