@@ -256,17 +256,12 @@
                         <img src="assets/images/strategy.png" class="interpolation-image"
                                  alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 80%;"/>
                             <br>
-                            <span style="font-size: 110%"><b>Whole field coverage strategy.</b> </span>
+                            <span style="font-size: 110%"><b>Whole field coverage strategy.</b>  We implemented a PID controller method that uses mainly filtered odometry data.
+                                Since the crops are typically planted in parallel rows for efficient management, this approach first rotates the robot by 90 degrees, 
+                                drives it forward based on the distance between crop rows, and then performs another 90-degree turn to navigate into the next lane. 
+                                Then, the LiDAR-based navigation system is started again and navigates the robot through the new lane. 
+                                This process is implemented as a finite state machine, which enables the automatic change of states during execution.</span>
                             </div>
-                    <div class="content has-text-justified">
-                        <p style="font-size: 125%">
-                            We implemented a PID controller method that uses mainly filtered odometry data.
-                            Since the crops are typically planted in parallel rows for efficient management, this approach first rotates the robot by 90 degrees, 
-                            drives it forward based on the distance between crop rows, and then performs another 90-degree turn to navigate into the next lane. 
-                            Then, the LiDAR-based navigation system is started again and navigates the robot through the new lane. 
-                            This process is implemented as a finite state machine, which enables the automatic change of states during execution.
-                        </p>
-                    </div>
                 </div>
             </div>
 
@@ -296,8 +291,8 @@
                     </div>
                     
                     <div class="row is-full-width">
-                        <img src="assets/images/results.png" class="interpolation-image"
-                                 alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 80%;"/>
+                        <img src="assets/images/table.png" class="interpolation-image"
+                                 alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 100%;"/>
                             <br>
                             <span style="font-size: 110%"><b>Navigation system’s workflow.</b> (i) The crop row detection algorithm uses LiDAR data and filtered odometry values [x, y, ψ] as inputs, predicting
                                 crop rows in the form [x1, y1, x2, y2] within the robot’s frame. (ii) The crop row following algorithm applies nonlinear MPC to control the robot to follow
