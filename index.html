@@ -132,7 +132,7 @@
             
             <div style="display: flex; gap: 10px;">
                 <div class="item item-sweep_without_exceeding">
-                    <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%" playbackRate="2.0">
+                    <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="70%" playbackRate="2.0">
                         <source src="assets/videos/visualization.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -192,10 +192,45 @@
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
             <div class="column">
-                <h2 class="title is-3">Crop Row Detection</h2>
+                <h2 class="title is-3">1. Crop Row Detection</h2>
                 <div class="row is-full-width">
                 <img src="assets/images/detection.png" class="interpolation-image"
                          alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; width: 80%;"/>
+                    <br></div>
+                <div class="content has-text-justified">
+                    <p style="font-size: 125%">
+                        Our crop-row detection algorithm is comprised of three
+                        key components. First, we estimate the ground plane using
+                        the LiDAR’s tilted angle θ, raise it to intersect the point
+                        cloud centroid, and filter out points below this plane. This
+                        process isolates the returns corresponding only to the top of
+                        the plants. Second, employing this filtered LiDAR data, we
+                        apply the K-means clustering algorithm to segment crop rows
+                        autonomously. The generated centroids of these segments
+                        represent the center of crop rows. We utilize the robot’s
+                        filtered odometry, [x, y, ψ], to accumulate detected centroids
+                        into the robot frame within a short time window. This
+                        approach allows us to have accurate local positioning and
+                        avoid drifting. Finally, we implement the RANSAC line
+                        fitting algorithm on this crop-row centroids map, extracting
+                        2D line locations for the first row on the left and the first
+                        row on the right in the robot frame.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-3">2. Crop Row Following</h2>
+                <div class="row is-full-width">
+                <img src="assets/images/mpc.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 80%;"/>
                     <br></div>
                 <div class="content has-text-justified">
                     <p style="font-size: 125%">
