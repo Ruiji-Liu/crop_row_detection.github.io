@@ -221,7 +221,29 @@
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span class="dvima">2. Crop Row Following</span></h2>
+                    <div class="row is-full-width">
+                        <img src="assets/images/mpc.png" class="interpolation-image"
+                                 alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 80%;"/>
+                            <br></div>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            After crop-row detection, we generate waypoints along the center line of the two predicted crop rows. 
+                            We apply a nonlinear Model Predictive Control (MPC) algorithm in the robot's local frame for tracking the generated waypoints. 
+                            <a href="https://acado.github.io/" target="_blank" style="color: #1e90ff; text-decoration: underline;">ACADO</a> is used to solve the quadratic programming problem, enabling real-time operation
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</section>
 <section class="section">
     <div class="container is-max-desktop">
         <!-- Abstract. -->
