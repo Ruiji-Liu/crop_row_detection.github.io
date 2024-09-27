@@ -297,10 +297,11 @@
                                  alt="" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 20px; margin-top: 20px;width: 100%;"/>
                                  
                             <br>
-                            <span style="font-size: 110%"><b>Navigation system’s workflow.</b> (i) The crop row detection algorithm uses LiDAR data and filtered odometry values [x, y, ψ] as inputs, predicting
-                                crop rows in the form [x1, y1, x2, y2] within the robot’s frame. (ii) The crop row following algorithm applies nonlinear MPC to control the robot to follow
-                                the center line of the predicted rows, sending linear velocity v and angular velocity w commands. (iii) The crop row switching algorithm utilizes a PID
-                                controller to navigate the robot to the next lane if no more crop rows are detected.</span>
+                            <span style="font-size: 110%"><b>Crop-row detection and crop-row following results.</b> The crop-row detection algorithm achieved an average <b>3.35cm</b> detection accuracy.
+                                This navigation system achieved an average of <b>3.55cm</b> autonomous driving accuracy and outperformed the baseline method in all testing fields. For the two figures on the right, 
+                                the x-axis represents the driving forward direction (around 200m). The y-axis for the top figure represents the robot's deviation from the center in meters, while the y-axis for the 
+                                bottom one represents the angular error between the robot and the crop rows in degrees. These figures show our navigation system’s capability and robustness to recover from an initial 
+                                distance error of 0.3m and an angular error of 8 degrees as these values decrease and fluctuate around 0 as the robot moves forward. </span>
 
                     </div>
 
@@ -310,7 +311,7 @@
                                  
                             <br>
                             <span style="font-size: 110%"><b>Trajectory</b> (red) of the robot while navigating across the whole field (green) in Gazebo-simulated young soybean (top left), 
-                                young corn (bottom left), grown soybean (top right), and grown corn (bottom right) fields (30m × 12m with 16 rows). These show our crop-row switching maneuver
+                                young corn (bottom left), grown soybean (top right), and grown corn (bottom right) fields <b>(30m × 12m with 16 rows)</b>. These show our crop-row switching maneuver
                             ability to cover the whole fields with different crop types and different crop stages</span>
 
                     </div>
